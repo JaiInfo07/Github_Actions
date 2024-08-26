@@ -1,5 +1,5 @@
 
-name : Super-Linter
+name: Super-Linter
 
 on: push
 
@@ -16,4 +16,7 @@ jobs:
         uses: github/super-linter@v4.9.5
         env:
           DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          linters: "google-java-format,checkstyle"
+
