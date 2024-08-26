@@ -13,6 +13,9 @@ jobs:
 
       - name: JDK-SETUP
         uses: actions/setup-java@v4.2.2
+        with:
+          distribution: 'adopt-openjdk'
+          java-version: '17'
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
