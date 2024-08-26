@@ -1,0 +1,18 @@
+name: Java Installation
+
+on: push
+
+jobs:
+  Java-JDK-Setup:
+    name: Setting Java JDK in Ubuntu Machine
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Action
+        uses: actions/checkout@v3
+
+      - name: JDK-SETUP
+        uses: github/setup-java@v4.2.2
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
