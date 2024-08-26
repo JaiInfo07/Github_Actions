@@ -6,4 +6,4 @@ def func():
   print(b)
 
 
-func()
+func();
