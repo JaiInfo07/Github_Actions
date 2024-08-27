@@ -24,7 +24,7 @@ jobs:
 
             - name: Inserting Words using Format() Method
               if: format('Hello {0}', 'Friend')
-              run: echo " yes it Added the Words ${{format('Hello', 'Friend')}}"
+              run: echo " yes it Added the Words ${{format('Hello {0}', 'Friend')}}"
 
             - name: Inserting Words using Format() Method
               if: format('Hello {0} {1} {2}', 'The', 'Lion', 'King')
