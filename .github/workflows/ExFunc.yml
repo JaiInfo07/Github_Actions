@@ -1,0 +1,16 @@
+name: Expression-Function-Trigger
+
+on:
+    push:
+        branches:
+            - main
+            - feature
+
+jobs:
+    Predefined-Expressions:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: StartsWith()
+              if:   startsWith('Hello', 'el')
+              run:  echo "It contains ${{startsWith('Hello', 'el')}}"
