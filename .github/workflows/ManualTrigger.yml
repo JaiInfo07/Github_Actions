@@ -11,6 +11,10 @@ on:
         description: " Nice to Meet you! "
         required: true
         type: string
+      phone:
+        description: " Can I get your Number? "
+        required: true
+        type: number
 
 jobs:
   Manual-Trigger:
@@ -22,4 +26,7 @@ jobs:
 
       - name: "Greetings to Display"
         run: echo " ${{inputs.greet}} "
+
+      - name: "Contact to Display"
+        run: echo " ${{inputs.phone}} "
     
