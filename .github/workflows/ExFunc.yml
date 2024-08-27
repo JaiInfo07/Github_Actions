@@ -8,7 +8,7 @@ on:
 
 jobs:
     Predefined-Expressions:
-        runs-on: ubuntu-latest
+        runs-on: [ubuntu-latest, windows-latest]
         steps:
             - name: Checking that the String Starts with the Given Letters
               if: startsWith('Hello', 'Hel')
