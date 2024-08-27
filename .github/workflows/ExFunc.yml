@@ -17,3 +17,23 @@ jobs:
             - name: Checking that the String contains the Given Letters
               if: contains('Jayasundar', 'sun')
               run: echo "yes it Contains"
+
+            - name: Checking that the String ends with the Given Letters
+              if: endsWith('Jayasundar', 'ar')
+              run: echo "yes it ends"
+
+            - name: Checking that the String ends with the Given Letters
+              if: endsWith('Jayasundar', 'ar')
+              run: echo "yes it ends"
+
+            - name: Inserting Words using Format() Method
+              if: format('Hello', 'Friend')
+              run: echo "yes it Added the Words"
+
+            - name: Inserting Words using Format() Method
+              if: format('Hello {0} {1} {2}', 'The', 'Lion', 'King')
+              run: echo "yes it Added the Words"
+
+            - name: Inserting Words using Format() Method
+              run: echo "${{join(github.event.issue.labels.*.name, ', ')}}"
+
