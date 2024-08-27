@@ -12,28 +12,21 @@ jobs:
         steps:
             - name: Checking that the String Starts with the Given Letters
               if: startsWith('Hello', 'Hel')
-              run: echo "It Starts with the Mentioned Letters"
+              run: echo " It Starts with 'Hel' "
 
             - name: Checking that the String contains the Given Letters
               if: contains('Jayasundar', 'sun')
-              run: echo "yes it Contains"
+              run: echo " yes it Contains 'sun' "
 
             - name: Checking that the String ends with the Given Letters
               if: endsWith('Jayasundar', 'ar')
-              run: echo "yes it ends"
-
-            - name: Checking that the String ends with the Given Letters
-              if: endsWith('Jayasundar', 'ar')
-              run: echo "yes it ends"
+              run: echo " yes it ends 'ar' "
 
             - name: Inserting Words using Format() Method
               if: format('Hello', 'Friend')
-              run: echo "yes it Added the Words"
+              run: echo " yes it Added the Words ${{format('Hello', 'Friend')}}"
 
             - name: Inserting Words using Format() Method
               if: format('Hello {0} {1} {2}', 'The', 'Lion', 'King')
-              run: echo "yes it Added the Words"
-
-            - name: Inserting Words using Format() Method
-              run: echo "${{join(github.event.issue.labels.*.name, ', ')}}"
+              run: echo "yes it Added the Words ${{format('Hello {0} {1} {2}', 'The', 'Lion', 'King')}}"
 
