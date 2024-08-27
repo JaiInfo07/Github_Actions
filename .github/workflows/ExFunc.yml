@@ -10,6 +10,10 @@ jobs:
     Predefined-Expressions:
         runs-on: ubuntu-latest
         steps:
-            - name: Checking that the String contains the Given Letters
+            - name: Checking that the String Starts with the Given Letters
               if: startsWith('Hello', 'Hel')
               run: echo "It Starts with the Mentioned Letters"
+
+            - name: Checking that the String contains the Given Letters
+              if: contains('Jayasundar', 'sun')
+              run: echo "yes it Contains"
