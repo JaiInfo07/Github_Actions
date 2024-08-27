@@ -7,7 +7,7 @@ on:
 
 jobs:
   Triggering-the-Workflow-based-on-Conditions:
-    if: github.repository == 'JaiInfo07/Github_Actions/.github/workflows'
+    if: github.repository == 'JaiInfo07/Github_Actions'
     runs-on: ubuntu-latest
 
     steps:
@@ -20,5 +20,5 @@ jobs:
     steps:
       - name: Failing the Condition
         run:  |
-              echo "The Condition doesn't meet the Condition"
+              echo "The Job doesn't meet the Condition"
               echo "<----- Try Again ----->"
