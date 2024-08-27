@@ -1,4 +1,3 @@
-
 name: Super-Linter
 
 on: push
@@ -17,6 +16,4 @@ jobs:
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          linters: "google-java-format,checkstyle"
 
