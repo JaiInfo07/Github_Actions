@@ -23,7 +23,7 @@ jobs:
               run: echo " yes it ends 'ar' "
 
             - name: Inserting Words using Format() Method
-              if: format('Hello', 'Friend')
+              if: format('Hello {0}', 'Friend')
               run: echo " yes it Added the Words ${{format('Hello', 'Friend')}}"
 
             - name: Inserting Words using Format() Method
