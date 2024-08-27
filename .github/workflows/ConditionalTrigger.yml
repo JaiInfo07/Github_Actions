@@ -1,0 +1,24 @@
+name: Conditional-Trigger
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Triggering-the-Workflow-based-on-Conditions:
+    if: github.repository == 'JaiInfo07/Github_Actions/.github/workflows'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Printing Statement
+        run:  echo "Hey Guys, It's Working !"
+
+  Triggering-the-Workflow-based-on-Conditions-when-failed:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Failing the Condition
+        run:  |
+              echo "The Condition doesn't meet the Condition"
+              echo "<----- Try Again ----->"
