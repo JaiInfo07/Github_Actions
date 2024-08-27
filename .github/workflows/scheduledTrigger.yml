@@ -1,0 +1,13 @@
+name: Scheduled-Trigger
+
+on:
+  schedule:
+    - cron: "* * 26 8 *"
+
+jobs:
+  Trigger-Event:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Starting The Workflow every 5 Minute
+        run: echo "The Current Time is $(date)"
