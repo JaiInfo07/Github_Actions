@@ -3,6 +3,10 @@ name: Scheduled-Trigger
 on:
   schedule:
     - cron: "*/5 * * * *"
+  push:
+    branches:
+      - main
+      - feature
 
 jobs:
   Trigger-Event:
