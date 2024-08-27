@@ -1,0 +1,25 @@
+name: WorkFlow-Dispatch
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: " Hey Buddy! Your Name "
+        required: true
+        type: string
+      greet:
+        description: " Nice to Meet you! "
+        required: true
+        type: string
+
+jobs:
+  Manual-Trigger:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Name to Display"
+        run: echo " Hey ${{inputs.name}} "
+
+      - name: "Greetings to Display"
+        run: echo " ${{inputs.greet}} "
+    
