@@ -9,8 +9,7 @@ on:
 jobs:
     Predefined-Expressions:
         runs-on: ubuntu-latest
-
         steps:
-            - name: StartsWith()
-              if:   startsWith('Hello', 'el')
-              run:  echo "It contains the Mention Letters"
+            - name: Checking that the String contains the Given Letters
+              if: startsWith('Hello', 'Hel')
+              run: echo "It Starts with the Mentioned Letters"
