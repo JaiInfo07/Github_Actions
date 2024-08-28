@@ -14,4 +14,4 @@ jobs:
             - name: Printing All ENV
               run: echo "$Greet"
               env:
-                Greet: ${{vars.actor}}
+                Greet: Enjoy Karo
