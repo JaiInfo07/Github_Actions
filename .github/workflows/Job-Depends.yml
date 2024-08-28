@@ -1,0 +1,17 @@
+name: Run Jobs Parallely
+
+on: ['push']
+
+jobs:
+    Dependent-Jobs2:
+        needs: Dependent-Jobs1
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print
+              run: echo Hello From Job 2
+    
+    Dependent-Jobs1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print
+              run: echo Hello From Job 1
