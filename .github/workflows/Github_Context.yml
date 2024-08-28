@@ -10,6 +10,8 @@ jobs:
               run: |
                 echo The Github_Action is:$Action
                 echo The Github_Actor is:$Repository
+                echo The Secret used here:$Secrets
               env:
                 Action: ${{github.action}}
                 Repository: ${{github.actor}}
+                Secrets: ${{secrets.GITHUB_TOKEN}}
