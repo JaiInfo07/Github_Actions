@@ -14,6 +14,6 @@ jobs:
                    echo "We can have a little Change here!"
                    echo "::endgroup::"
             - name: Store Value in a Variable
-              run: echo "VAR = Jayasundar"
+              run: echo "VAR = Jayasundar" >> $GITHUB_ENV
             - name: Retriving the Stored value
               run: echo $VAR
