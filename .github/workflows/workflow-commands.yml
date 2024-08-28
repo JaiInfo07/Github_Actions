@@ -13,3 +13,7 @@ jobs:
                    echo "May I know the Status of Your Task ?"
                    echo "We can have a little Change here!"
                    echo "::endgroup::"
+            - name: Store Value in a Variable
+              run: echo "VAR = Jayasundar"
+            - name: Retriving the Stored value
+              run: echo $VAR
