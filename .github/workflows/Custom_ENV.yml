@@ -3,15 +3,15 @@ name: Custom ENV Variables
 on: ['push']
 
 env:
-    NOWDR: "2"
+    NOWDR: 2
 
 jobs:
     Accessing-All-Level-ENV:
         runs-on: windows-latest
         env:
-            NOWD: "3"
+            NOWD: 3
         steps:
             - name: Printing All ENV
-              run: echo You Worked for $NOWD and The Remaining Days are $NOWDR. $greet
+              run: echo "$NOWD Days Worked and The Remaining Days are $NOWDR. $greet"
               env:
-                greet: "Then, Have a Weekend"
+                greet: Enjoy
