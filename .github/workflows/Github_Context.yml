@@ -10,4 +10,4 @@ jobs:
               run: echo $Action
               env:
                 name: Finding GitHub.Action Value
-                run: echo ${{github.action}}
+                run: echo Action=${{github.action}}
