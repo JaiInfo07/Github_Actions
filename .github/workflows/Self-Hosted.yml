@@ -1,0 +1,13 @@
+name: Self-Hosted-Runner
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    Self_Hosted_Runner:
+        runs-on: self-hosted
+        steps:
+            - name: Printing the Statement
+              run: echo Self-Hosted-Runner Executed.
