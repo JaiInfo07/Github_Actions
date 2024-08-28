@@ -1,0 +1,13 @@
+name: GitHub-Contexts
+
+on: ['push']
+
+jobs:
+    Contexts:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Using github.action
+              run: echo $Action
+              env:
+                name: Finding GitHub.Action Value
+                run: echo ${{github.action}}
