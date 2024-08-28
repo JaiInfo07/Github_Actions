@@ -12,6 +12,9 @@ jobs:
             Current_Day: Wednesday
         steps:
             - name: Printing All ENV
-              run: echo "$Greet"
+              run: |
+                echo Last_Day: %Last_Day%
+                echo Current_Day: %Current_Day%
+                echo Greet: %Greet%
               env:
-                Greet: Enjoy Karo
+                Greet: Enjoy Karo.
