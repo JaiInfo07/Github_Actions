@@ -3,15 +3,15 @@ name: Custom ENV Variables
 on: ['push']
 
 env:
-    NOWDR: 2
+    Last_Day: Friday
 
 jobs:
     Accessing-All-Level-ENV:
         runs-on: windows-latest
         env:
-            NOWD: 3
+            Current_Day: Wednesday
         steps:
             - name: Printing All ENV
-              run: echo "$NOWD Days Worked and The Remaining Days are $NOWDR. $greet"
+              run: echo "$Last_Day Days Worked and The Remaining Days are $Current_Day. $Greet"
               env:
-                greet: Enjoy
+                Greet: Enjoy
