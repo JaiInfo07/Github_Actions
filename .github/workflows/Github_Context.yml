@@ -7,7 +7,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Using github.action
-              run: echo $Action
+              run: echo "The Github_Action is:$Action"
               env:
-                name: Finding GitHub.Action Value
-                run: echo Action=${{github.action}}
+                Action: ${{github.action}}
