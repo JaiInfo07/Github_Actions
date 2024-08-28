@@ -9,7 +9,7 @@ jobs:
             - name: Using github.action to check Internal Variables
               run: |
                 echo The Github_Action is:$Action
-                echo The Github_Action_Status is:$Repository
+                echo The Github_Actor is:$Repository
               env:
                 Action: ${{github.action}}
-                Repository: ${{github.action_status}}
+                Repository: ${{github.actor}}
