@@ -1,0 +1,15 @@
+name: Workflow-Commands
+
+on: ['push','pull_request']
+
+jobs:
+    Group-Message:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Group-Log
+              run: |
+                   echo "::group::Group Message"
+                   echo "Hey, sanjay"
+                   echo "May I know the Status of Your Task ?"
+                   echo "We can have a little Change here!"
+                   echo "::endgroup::"
