@@ -6,7 +6,10 @@ jobs:
     Contexts:
         runs-on: ubuntu-latest
         steps:
-            - name: Using github.action
-              run: echo "The Github_Action_Repo is:$Action"
+            - name: Using github.action to check Internal Variables
+              run: |
+                echo The Github_Action is:$Action
+                echo The Github_Action_Status is:$Repository
               env:
-                Action: ${{github.action_repository}}
+                Action: ${{github.action}}
+                Repository: ${{github.action_status}}
