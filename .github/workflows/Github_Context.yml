@@ -11,6 +11,7 @@ jobs:
                 echo The Github_Action is:$Action
                 echo The Github_Actor is:$Repository
                 echo The Secret Token used here:$Secrets
+                echo The Secret Token used here:${{github.event_name}}
               env:
                 Action: ${{github.action}}
                 Repository: ${{github.actor}}
