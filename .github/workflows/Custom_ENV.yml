@@ -12,6 +12,6 @@ jobs:
             Current_Day: Wednesday
         steps:
             - name: Printing All ENV
-              run: echo "$Last_Day Days Worked and The Remaining Days are $Current_Day. $Greet"
+              run: echo "$Greet"
               env:
-                Greet: Enjoy
+                Greet: ${{vars.actor}}
