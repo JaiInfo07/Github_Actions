@@ -7,6 +7,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Using github.action
-              run: echo "The Github_Action is:$Action"
+              run: echo "The Github_Action_Repo is:$Action"
               env:
-                Action: ${{github.action}}
+                Action: ${{github.action_repository}}
