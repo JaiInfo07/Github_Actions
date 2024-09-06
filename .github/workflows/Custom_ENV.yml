@@ -6,11 +6,11 @@ jobs:
     Accessing-All-Level-ENV:
         runs-on: ubuntu-latest
         env:
-            current: "Wednesday"
+            current: "Friday"
         steps:
             - name: Printing All ENV
               run: |
-                echo Current_Day: ${{current}}
-                echo Greet: ${{greet}}
+                echo Current_Day: $current
+                echo Greet: $greet
               env:
                 greet: Enjoy Karo.
