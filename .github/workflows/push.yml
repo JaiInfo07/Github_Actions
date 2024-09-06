@@ -1,0 +1,11 @@
+name: Practice - One
+
+on: push
+
+jobs:
+  Push-Example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Statement
+        run: echo Practice Done !
+  
