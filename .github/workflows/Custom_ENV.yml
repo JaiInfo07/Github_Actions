@@ -3,18 +3,18 @@ name: Custom ENV Variables
 on: ['push']
 
 env:
-    Last_Day: Friday
+    day: Friday
 
 jobs:
     Accessing-All-Level-ENV:
         runs-on: windows-latest
         env:
-            Current_Day: Wednesday
+            current: Wednesday
         steps:
             - name: Printing All ENV
               run: |
-                echo Last_Day: %Last_Day%
-                echo Current_Day: %Current_Day%
-                echo Greet: %Greet%
+                echo Last_Day: %day%
+                echo Current_Day: %current%
+                echo Greet: %greet%
               env:
-                Greet: Enjoy Karo.
+                greet: Enjoy Karo.
