@@ -7,14 +7,14 @@ env:
 
 jobs:
     Accessing-All-Level-ENV:
-        runs-on: windows-latest
+        runs-on: ubuntu-latest
         env:
             current: Wednesday
         steps:
             - name: Printing All ENV
               run: |
-                echo Last_Day: %day%
-                echo Current_Day: %current%
-                echo Greet: %greet%
+                echo "Last_Day: ${{day}}"
+                echo "Current_Day: ${{current}}"
+                echo "Greet: ${{greet}}"
               env:
                 greet: Enjoy Karo.
