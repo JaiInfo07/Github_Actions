@@ -9,7 +9,7 @@ jobs:
     Accessing-All-Level-ENV:
         runs-on: ubuntu-latest
         env:
-            current: Wednesday
+            current: "Wednesday"
         steps:
             - name: Printing All ENV
               run: |
