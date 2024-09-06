@@ -3,7 +3,7 @@ name: Custom ENV Variables
 on: ['push']
 
 env:
-    day: Friday
+    last_day: Friday
 
 jobs:
     Accessing-All-Level-ENV:
@@ -13,7 +13,7 @@ jobs:
         steps:
             - name: Printing All ENV
               run: |
-                echo Last_Day: ${{day}}
+                echo Last_Day: ${{last_day}}
                 echo Current_Day: ${{current}}
                 echo Greet: ${{greet}}
               env:
